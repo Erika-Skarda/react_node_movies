@@ -1,9 +1,15 @@
 import React from "react";
-import Login from "./pages/Login";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext";
+import Routes from './routes/index';
 
 function App() {
   return (
-    <Login />
+    <BrowserRouter>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </BrowserRouter>
   )
 }
 
